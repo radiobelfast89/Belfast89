@@ -4,37 +4,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scroll Page</title>
+    <title>Belfast 89</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Belfast 89</h1>
-            <button id="playBtn">Listen Now</button>
+<!-- HERO -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <img src="logo.png" alt="Belfast 89 Logo" class="logo">
+
+        <div class="live-indicator">
+            <span class="dot"></span>
+            LIVE
         </div>
 
-        <a href="#next" class="scroll-indicator">
-            <p>Scroll for more</p>
-            <div class="arrow"></div>
-        </a>
+        <h1>Belfast 89</h1>
 
-        <!-- Audio -->
-        <audio id="radio">
-            <source src="https://uksoutha.streaming.broadcast.radio/belfastfm" type="audio/mpeg">
-            Your browser does not support audio.
-        </audio>
-    </section>
+        <button id="playBtn">Listen Now</button>
 
-    <!-- Next Section -->
-    <section class="content" id="next">
-        <h2>More Content</h2>
-        <p>You successfully scrolled 🎉</p>
-    </section>
+    </div>
+
+    <!-- scroll hint -->
+    <a href="#content" class="scroll-indicator">
+    <span class="scroll-text">Scroll for more</span>
+    <span class="chevron"></span>
+
+</a>
+
+    <!-- RADIO -->
+    <audio id="radio">
+        <source src="https://uksoutha.streaming.broadcast.radio/belfastfm" type="audio/mpeg">
+    </audio>
+
+</section>
+
+<!-- FOOTER (FIXED) -->
+<footer class="sticky-footer">
+    <a href="#">Home</a>
+    <a href="#next">Schedule</a>
+    <a href="#">Contact</a>
+</footer>
+
+<!-- CONTENT -->
+<section class="content" id="next">
+
+    <div class="content-wrapper">
+
+        <h2>Upcoming Programs</h2>
+
+        <img src="sunday.png" alt="Schedule">
+
+        <ul class="schedule">
+            <li><strong>08:00 - 10:00:</strong> Weekend Breakfast – Paddy Smyth</li>
+            <li><strong>10:00 - 13:00:</strong> Lazy Sunday</li>
+            <li><strong>13:00 - 16:00:</strong> Mervyn McCaughey</li>
+            <li><strong>16:00 - 18:00:</strong> Shona Wilson</li>
+            <li><strong>18:00 - 20:00:</strong> Sam McFerran</li>
+            <li><strong>20:00 - 22:00:</strong> Mike Allen</li>
+            <li><strong>22:00 - 08:00:</strong> Overnight Jukebox</li>
+        </ul>
+
+        <h2>About Belfast 89</h2>
+
+        <p>Belfast 89FM has been broadcasting since June 2015 and has become a trusted local station playing classic hits.</p>
+
+        <p>Simple, reliable radio with great music and strong community connection.</p>
+
+        <img src="desk.png" alt="Studio">
+
+    </div>
+
+</section>
+
+<script src="script.js" defer></script>
 
 </body>
-
 </html>
