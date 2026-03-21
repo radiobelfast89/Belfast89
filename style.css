@@ -1,0 +1,257 @@
+/* =========================
+   RESET / BASE
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    background-color: #0f0f10;
+    color: #111;
+}
+
+/* Typography */
+h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 28px;
+    margin: 30px 0 15px;
+}
+
+p {
+    color: white;
+    line-height: 1.6;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    background: radial-gradient(circle at top, #2a2a2a, #0f0f10);
+    color: white;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* =========================
+   LOGO
+========================= */
+.logo {
+    width: 150px;
+    display: block;
+}
+
+/* =========================
+   LIVE INDICATOR
+========================= */
+.live-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 6px 12px;
+    margin: 10px 0;
+
+    font-size: 14px;
+
+    background: #b30000;
+    border-radius: 20px;
+    box-shadow: 0 0 12px rgba(255, 71, 87, 0.5);
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+    margin-top: 15px;
+    padding: 14px 28px;
+
+    font-size: 18px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #ff4757;
+    color: white;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 71, 87, 0.3);
+}
+
+/* =========================
+   SCROLL INDICATOR (FIXED)
+========================= */
+.scroll-indicator {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+
+    text-decoration: none;
+}
+
+/* Text */
+.scroll-text {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.85);
+
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Arrow */
+.arrow {
+    font-size: 26px;
+    color: rgba(255, 255, 255, 0.9);
+
+    animation: bounce 1.5s infinite;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Bounce animation */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+/* =========================
+   CONTENT AREA
+========================= */
+.content {
+    padding: 60px 20px 120px;
+    background: #e9e9ec;
+}
+
+.content-wrapper {
+    max-width: 1000px;
+    margin: auto;
+
+    padding: 40px;
+    background: white;
+
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+
+    text-align: left;
+}
+
+.content img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 20px 0;
+    object-fit: cover;
+}
+
+/* =========================
+   SCHEDULE LIST
+========================= */
+.schedule {
+    list-style: none;
+    padding: 0;
+}
+
+.schedule li {
+    padding: 12px;
+    margin-bottom: 10px;
+
+    background: #f4f4f4;
+    border-radius: 10px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.sticky-footer {
+    width: 100%;
+    padding: 12px 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    background: #222;
+}
+
+.sticky-footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (min-width: 768px) {
+    .logo {
+        width: 260px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .logo {
+        width: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        width: 80%;
+    }
+
+    .content {
+        padding: 40px 15px 100px;
+    }
+}

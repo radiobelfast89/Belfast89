@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Belfast 89</h1>
+            <button id="playBtn">Listen Now</button>
+        </div>
+
+        <a href="#next" class="scroll-indicator">
+            <p>Scroll for more</p>
+            <div class="arrow"></div>
+        </a>
+
+        <!-- Audio -->
+        <audio id="radio">
+            <source src="https://uksoutha.streaming.broadcast.radio/belfastfm" type="audio/mpeg">
+            Your browser does not support audio.
+        </audio>
+    </section>
+
+    <!-- Next Section -->
+    <section class="content" id="next">
+        <h2>More Content</h2>
+        <p>You successfully scrolled 🎉</p>
+    </section>
+
+</body>
+
+</html>
